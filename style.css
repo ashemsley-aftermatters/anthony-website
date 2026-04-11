@@ -1,0 +1,166 @@
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222;
+  background: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Nav */
+nav {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 24px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-family: system-ui, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+section:nth-child(even) {
+  background: #f7f7f7;
+}
+
+/* Hero */
+#hero {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 2.6rem;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #555;
+  font-family: system-ui, sans-serif;
+  margin-bottom: 24px;
+}
+
+.hero-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #444;
+  text-align: left;
+}
+
+/* Section headings */
+h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Project Card */
+.project-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 16px;
+  color: #1a4f8a;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-size: 15px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact-list {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-list a {
+  color: #1a4f8a;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 28px 0;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+}

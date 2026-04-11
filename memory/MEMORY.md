@@ -1,0 +1,1 @@
+- [Anthony Hemsley - User Profile](user_profile.md) — Complete beginner, real estate appraiser, founder of AfterMatters.ai; keep explanations simple and non-technical
