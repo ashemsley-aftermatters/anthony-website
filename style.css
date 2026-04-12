@@ -64,6 +64,12 @@ section:nth-child(even) {
   text-align: center;
 }
 
+.hero-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+}
+
 #hero h1 {
   font-size: 2.6rem;
   font-weight: normal;
