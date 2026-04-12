@@ -73,7 +73,7 @@ section:nth-child(even) {
 .hero-logo-secondary {
   display: block;
   margin: 16px auto 20px;
-  width: 250px;
+  width: 100px;
 }
 
 #hero h1 {
