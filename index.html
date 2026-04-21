@@ -49,6 +49,26 @@
     </div>
   </section>
 
+  <!-- Contact Form -->
+  <section id="contact-form">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Leave your name and email and I'll reach out to you.</p>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <button type="submit" id="submitBtn">Submit</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact">
     <div class="container">
@@ -66,5 +86,41 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const { createClient } = supabase;
+    const sb = createClient(
+      'https://nzxabkeddzmujufvvenb.supabase.co',
+      'sb_publishable_XSQstneubbpu0iBeskpj_Q_MH5kROy2'
+    );
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('formMessage');
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      msg.textContent = '';
+      msg.className = 'form-message';
+
+      const { error } = await sb.from('contacts').insert([{ name, email }]);
+
+      if (error) {
+        msg.textContent = 'Something went wrong. Please try again.';
+        msg.classList.add('form-message--error');
+        btn.disabled = false;
+        btn.textContent = 'Submit';
+      } else {
+        msg.textContent = 'Thank you! I\'ll be in touch soon.';
+        msg.classList.add('form-message--success');
+        document.getElementById('contactForm').reset();
+        btn.disabled = false;
+        btn.textContent = 'Submit';
+      }
+    });
+  </script>
 </body>
 </html>
